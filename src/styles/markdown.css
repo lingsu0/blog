@@ -20,8 +20,24 @@
     }
 
     a:not(.no-styling) {
-        @apply relative bg-none transition rounded-md p-1 -m-1 expand-animation font-medium text-[var(--primary)]
+        @apply relative bg-none transition rounded-md p-1 -m-1 font-medium text-[var(--primary)]
         underline decoration-[var(--link-underline)] decoration-1 decoration-dashed underline-offset-4;
+        /* 展开动画样式直接内联 */
+        position: relative;
+        z-index: 0;
+        &:before {
+            @apply ease-out transition rounded-[inherit] inset-0 -z-10;
+            content: '';
+            position: absolute;
+            scale: 0.85;
+            background: none;
+        }
+        &:hover:before {
+            @apply scale-100 bg-[var(--btn-plain-bg-hover)];
+        }
+        &:active:before {
+            @apply bg-[var(--btn-plain-bg-active)];
+        }
         box-decoration-break: clone;
         -webkit-box-decoration-break: clone;
         display: inline-block;
