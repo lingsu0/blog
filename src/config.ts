@@ -60,21 +60,9 @@ export const profileConfig: ProfileConfig = {
 	bio: "希望有一天可以躺着赚钱", // 个人简介
 	links: [
 		{
-			name: "Twitter",
-			icon: "fa6-brands:twitter", // 访问 https://icones.js.org/ 查看图标代码
-			// 如果尚未包含，需要安装对应的图标集
-			// `pnpm add @iconify-json/<icon-set-name>`
-			url: "https://twitter.com",
-		},
-		{
-			name: "Steam",
-			icon: "fa6-brands:steam",
-			url: "https://store.steampowered.com",
-		},
-		{
 			name: "GitHub",
 			icon: "fa6-brands:github",
-			url: "https://github.com/saicaca/fuwari",
+			url: "https://github.com/lingsu0/blog",
 		},
 	],
 };
