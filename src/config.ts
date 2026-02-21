@@ -55,7 +55,7 @@ export const navBarConfig: NavBarConfig = {
 };
 
 export const profileConfig: ProfileConfig = {
-	avatar: "assets/images/demo-avatar.png", // 头像图片路径，相对于 /src 目录。如果以 '/' 开头则相对于 /public 目录
+	avatar: "assets/images/avatar.png", // 头像图片路径，相对于 /src 目录。如果以 '/' 开头则相对于 /public 目录
 	name: "凌索ling", // 显示名称
 	bio: "希望有一天可以躺着赚钱", // 个人简介
 	links: [
