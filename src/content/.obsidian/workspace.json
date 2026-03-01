@@ -1,199 +1,199 @@
 {
-  "main": {
-    "id": "fd52af504660de4a",
-    "type": "split",
-    "children": [
-      {
-        "id": "a54fa0fa3d00712f",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "4d95bcb1b94a2ed2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "posts/video.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "video"
-            }
-          }
-        ]
-      }
-    ],
-    "direction": "vertical"
-  },
-  "left": {
-    "id": "00c758b9b979410f",
-    "type": "split",
-    "children": [
-      {
-        "id": "1fefe05dde30098e",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "bece46eab31be58b",
-            "type": "leaf",
-            "state": {
-              "type": "file-explorer",
-              "state": {
-                "sortOrder": "alphabetical",
-                "autoReveal": false
-              },
-              "icon": "lucide-folder-closed",
-              "title": "文件列表"
-            }
-          },
-          {
-            "id": "42299e5201ce7c81",
-            "type": "leaf",
-            "state": {
-              "type": "search",
-              "state": {
-                "query": "",
-                "matchingCase": false,
-                "explainSearch": false,
-                "collapseAll": false,
-                "extraContext": false,
-                "sortOrder": "alphabetical"
-              },
-              "icon": "lucide-search",
-              "title": "搜索"
-            }
-          },
-          {
-            "id": "800fc6ff810b8caa",
-            "type": "leaf",
-            "state": {
-              "type": "bookmarks",
-              "state": {},
-              "icon": "lucide-bookmark",
-              "title": "书签"
-            }
-          }
-        ]
-      }
-    ],
-    "direction": "horizontal",
-    "width": 300
-  },
-  "right": {
-    "id": "68f053019d2c3478",
-    "type": "split",
-    "children": [
-      {
-        "id": "f2251ff4527550c3",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "251e8da137b45f06",
-            "type": "leaf",
-            "state": {
-              "type": "backlink",
-              "state": {
-                "file": "posts/expressive-code.md",
-                "collapseAll": false,
-                "extraContext": false,
-                "sortOrder": "alphabetical",
-                "showSearch": false,
-                "searchQuery": "",
-                "backlinkCollapsed": false,
-                "unlinkedCollapsed": true
-              },
-              "icon": "links-coming-in",
-              "title": "expressive-code 的反向链接列表"
-            }
-          },
-          {
-            "id": "525c04a2f9ab6efd",
-            "type": "leaf",
-            "state": {
-              "type": "outgoing-link",
-              "state": {
-                "file": "posts/expressive-code.md",
-                "linksCollapsed": false,
-                "unlinkedCollapsed": true
-              },
-              "icon": "links-going-out",
-              "title": "expressive-code 的出链列表"
-            }
-          },
-          {
-            "id": "29cbb6eaa58fac65",
-            "type": "leaf",
-            "state": {
-              "type": "tag",
-              "state": {
-                "sortOrder": "frequency",
-                "useHierarchy": true,
-                "showSearch": false,
-                "searchQuery": ""
-              },
-              "icon": "lucide-tags",
-              "title": "标签"
-            }
-          },
-          {
-            "id": "dcd21b27a93d755b",
-            "type": "leaf",
-            "state": {
-              "type": "all-properties",
-              "state": {
-                "sortOrder": "frequency",
-                "showSearch": false,
-                "searchQuery": ""
-              },
-              "icon": "lucide-archive",
-              "title": "添加笔记属性"
-            }
-          },
-          {
-            "id": "2f70073a76cc2805",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {
-                "file": "posts/expressive-code.md",
-                "followCursor": false,
-                "showSearch": false,
-                "searchQuery": ""
-              },
-              "icon": "lucide-list",
-              "title": "expressive-code 的大纲"
-            }
-          }
-        ]
-      }
-    ],
-    "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
-  },
-  "left-ribbon": {
-    "hiddenItems": {
-      "switcher:打开快速切换": false,
-      "graph:查看关系图谱": false,
-      "canvas:新建白板": false,
-      "daily-notes:打开/创建今天的日记": false,
-      "templates:插入模板": false,
-      "command-palette:打开命令面板": false,
-      "bases:新建数据库": false
-    }
-  },
-  "active": "4d95bcb1b94a2ed2",
-  "lastOpenFiles": [
-    "未命名 1",
-    "未命名",
-    "posts/expressive-code.md",
-    "posts/markdown.md",
-    "posts/video.md",
-    "posts/guide/index.md",
-    "2026-02-24.md",
-    "posts/guide/cover.jpeg",
-    "posts/draft.md",
-    "posts/markdown-extended.md"
-  ]
+	"main": {
+		"id": "fd52af504660de4a",
+		"type": "split",
+		"children": [
+			{
+				"id": "a54fa0fa3d00712f",
+				"type": "tabs",
+				"children": [
+					{
+						"id": "4d95bcb1b94a2ed2",
+						"type": "leaf",
+						"state": {
+							"type": "markdown",
+							"state": {
+								"file": "posts/video.md",
+								"mode": "source",
+								"source": false
+							},
+							"icon": "lucide-file",
+							"title": "video"
+						}
+					}
+				]
+			}
+		],
+		"direction": "vertical"
+	},
+	"left": {
+		"id": "00c758b9b979410f",
+		"type": "split",
+		"children": [
+			{
+				"id": "1fefe05dde30098e",
+				"type": "tabs",
+				"children": [
+					{
+						"id": "bece46eab31be58b",
+						"type": "leaf",
+						"state": {
+							"type": "file-explorer",
+							"state": {
+								"sortOrder": "alphabetical",
+								"autoReveal": false
+							},
+							"icon": "lucide-folder-closed",
+							"title": "文件列表"
+						}
+					},
+					{
+						"id": "42299e5201ce7c81",
+						"type": "leaf",
+						"state": {
+							"type": "search",
+							"state": {
+								"query": "",
+								"matchingCase": false,
+								"explainSearch": false,
+								"collapseAll": false,
+								"extraContext": false,
+								"sortOrder": "alphabetical"
+							},
+							"icon": "lucide-search",
+							"title": "搜索"
+						}
+					},
+					{
+						"id": "800fc6ff810b8caa",
+						"type": "leaf",
+						"state": {
+							"type": "bookmarks",
+							"state": {},
+							"icon": "lucide-bookmark",
+							"title": "书签"
+						}
+					}
+				]
+			}
+		],
+		"direction": "horizontal",
+		"width": 300
+	},
+	"right": {
+		"id": "68f053019d2c3478",
+		"type": "split",
+		"children": [
+			{
+				"id": "f2251ff4527550c3",
+				"type": "tabs",
+				"children": [
+					{
+						"id": "251e8da137b45f06",
+						"type": "leaf",
+						"state": {
+							"type": "backlink",
+							"state": {
+								"file": "posts/expressive-code.md",
+								"collapseAll": false,
+								"extraContext": false,
+								"sortOrder": "alphabetical",
+								"showSearch": false,
+								"searchQuery": "",
+								"backlinkCollapsed": false,
+								"unlinkedCollapsed": true
+							},
+							"icon": "links-coming-in",
+							"title": "expressive-code 的反向链接列表"
+						}
+					},
+					{
+						"id": "525c04a2f9ab6efd",
+						"type": "leaf",
+						"state": {
+							"type": "outgoing-link",
+							"state": {
+								"file": "posts/expressive-code.md",
+								"linksCollapsed": false,
+								"unlinkedCollapsed": true
+							},
+							"icon": "links-going-out",
+							"title": "expressive-code 的出链列表"
+						}
+					},
+					{
+						"id": "29cbb6eaa58fac65",
+						"type": "leaf",
+						"state": {
+							"type": "tag",
+							"state": {
+								"sortOrder": "frequency",
+								"useHierarchy": true,
+								"showSearch": false,
+								"searchQuery": ""
+							},
+							"icon": "lucide-tags",
+							"title": "标签"
+						}
+					},
+					{
+						"id": "dcd21b27a93d755b",
+						"type": "leaf",
+						"state": {
+							"type": "all-properties",
+							"state": {
+								"sortOrder": "frequency",
+								"showSearch": false,
+								"searchQuery": ""
+							},
+							"icon": "lucide-archive",
+							"title": "添加笔记属性"
+						}
+					},
+					{
+						"id": "2f70073a76cc2805",
+						"type": "leaf",
+						"state": {
+							"type": "outline",
+							"state": {
+								"file": "posts/expressive-code.md",
+								"followCursor": false,
+								"showSearch": false,
+								"searchQuery": ""
+							},
+							"icon": "lucide-list",
+							"title": "expressive-code 的大纲"
+						}
+					}
+				]
+			}
+		],
+		"direction": "horizontal",
+		"width": 300,
+		"collapsed": true
+	},
+	"left-ribbon": {
+		"hiddenItems": {
+			"switcher:打开快速切换": false,
+			"graph:查看关系图谱": false,
+			"canvas:新建白板": false,
+			"daily-notes:打开/创建今天的日记": false,
+			"templates:插入模板": false,
+			"command-palette:打开命令面板": false,
+			"bases:新建数据库": false
+		}
+	},
+	"active": "4d95bcb1b94a2ed2",
+	"lastOpenFiles": [
+		"未命名 1",
+		"未命名",
+		"posts/expressive-code.md",
+		"posts/markdown.md",
+		"posts/video.md",
+		"posts/guide/index.md",
+		"2026-02-24.md",
+		"posts/guide/cover.jpeg",
+		"posts/draft.md",
+		"posts/markdown-extended.md"
+	]
 }
