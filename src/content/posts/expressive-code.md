@@ -21,7 +21,7 @@ draft: false
 console.log('这段代码被语法高亮了！')
 ```
 
-#### Rendering ANSI escape sequences
+#### 渲染 ANSI 转义序列
 
 ```ansi
 ANSI colors:
@@ -42,7 +42,7 @@ Text formatting: [1mBold[0m [2mDimmed[0m [3mItalic[0m [4mUnderline[0m
 
 #### 编辑器与终端框架
 
-[编辑器与终端框架](https://expressive-code.com/key-features/frames/)
+[框架](https://expressive-code.com/key-features/frames/)
 
 #### 代码编辑器框架
 
@@ -100,7 +100,7 @@ New-Alias tail Watch-Tail
 // 第 8 行 - 按范围 "7-8" 定位
 ```
 
-#### Selecting line marker types (mark, ins, del)
+#### 选择行标记类型（mark、ins、del）
 
 ```js title="line-markers.js" del={2} ins={3-4} {6}
 function demo() {
@@ -112,7 +112,7 @@ function demo() {
 }
 ```
 
-#### Adding labels to line markers
+#### 为行标记添加标签
 
 ```jsx {"1":5} del={"2":7-8} ins={"3":10-12}
 // labeled-line-markers.jsx
@@ -130,7 +130,7 @@ function demo() {
 </button>
 ```
 
-#### Adding long labels on their own lines
+#### 为行标记添加长标签（独占一行）
 
 ```jsx {"1. Provide the value prop here:":5-6} del={"2. Remove the disabled and active states:":8-10} ins={"3. Add this to render the children inside the button:":12-15}
 // labeled-line-markers.jsx
@@ -151,75 +151,30 @@ function demo() {
 </button>
 ```
 
-#### Using diff-like syntax
+#### 使用类 diff 语法
 
-```diff
-+this line will be marked as inserted
--this line will be marked as deleted
-this is a regular line
-```
+#### 结合语法高亮与类 diff 语法
 
----
+#### 标记行内的单个文本
 
-```diff
---- a/README.md
-+++ b/README.md
-@@ -1,3 +1,4 @@
-+this is an actual diff file
--all contents will remain unmodified
- no whitespace will be removed either
-```
-
-#### Combining syntax highlighting with diff-like syntax
-
-```diff lang="js"
-  function thisIsJavaScript() {
-    // This entire block gets highlighted as JavaScript,
-    // and we can still add diff markers to it!
--   console.log('Old code to be removed')
-+   console.log('New and shiny code!')
-  }
-```
-
-#### Marking individual text inside lines
-
-```js "given text"
-function demo() {
-  // Mark any given text inside lines
-  return 'Multiple matches of the given text are supported';
-}
-```
-
-#### Regular expressions
+#### 正则表达式
 
 ```ts /ye[sp]/
 console.log('The words yes and yep will be marked.')
 ```
 
-#### Escaping forward slashes
+#### 转义正斜杠
 
-```sh /\/ho.*\//
-echo "Test" > /home/test.txt
-```
+#### 选择行内标记类型（mark、ins、del）
 
-#### Selecting inline marker types (mark, ins, del)
+### 自动换行
 
-```js "return true;" ins="inserted" del="deleted"
-function demo() {
-  console.log('These are inserted and deleted marker types');
-  // The return statement uses the default marker type
-  return true;
-}
-```
+[自动换行](https://expressive-code.com/key-features/word-wrap/)
 
-### Word Wrap
-
-[Word Wrap](https://expressive-code.com/key-features/word-wrap/)
-
-#### Configuring word wrap per block
+#### 为每个代码块配置自动换行
 
 ```js wrap
-// Example with wrap
+// 示例：启用自动换行
 function getLongString() {
   return 'This is a very long string that will most probably not fit into the available space unless the container is extremely wide'
 }
@@ -228,16 +183,16 @@ function getLongString() {
 ---
 
 ```js wrap=false
-// Example with wrap=false
+// 示例：禁用自动换行
 function getLongString() {
   return 'This is a very long string that will most probably not fit into the available space unless the container is extremely wide'
 }
 ```
 
-#### Configuring indentation of wrapped lines
+#### 配置换行缩进
 
 ```js wrap preserveIndent
-// Example with preserveIndent (enabled by default)
+// 示例：preserveIndent（默认启用）
 function getLongString() {
   return 'This is a very long string that will most probably not fit into the available space unless the container is extremely wide'
 }
@@ -246,51 +201,51 @@ function getLongString() {
 ---
 
 ```js wrap preserveIndent=false
-// Example with preserveIndent=false
+// 示例：preserveIndent=false
 function getLongString() {
   return 'This is a very long string that will most probably not fit into the available space unless the container is extremely wide'
 }
 ```
 
-## Collapsible Sections
+## 可折叠区块
 
-[Collapsible Sections](https://expressive-code.com/plugins/collapsible-sections/)
+[可折叠区块](https://expressive-code.com/plugins/collapsible-sections/)
 
 ```js collapse={1-5, 12-14, 21-24}
-// All this boilerplate setup code will be collapsed
+// 所有样板设置代码将被折叠
 import { someBoilerplateEngine } from '@example/some-boilerplate'
 import { evenMoreBoilerplate } from '@example/even-more-boilerplate'
 
 const engine = someBoilerplateEngine(evenMoreBoilerplate())
 
-// This part of the code will be visible by default
+// 这部分代码默认可见
 engine.doSomething(1, 2, 3, calcFn)
 
 function calcFn() {
-  // You can have multiple collapsed sections
+  // 你可以有多个折叠区块
   const a = 1
   const b = 2
   const c = a + b
 
-  // This will remain visible
+  // 这部分保持可见
   console.log(`Calculation result: ${a} + ${b} = ${c}`)
   return c
 }
 
-// All this code until the end of the block will be collapsed again
+// 所有直到块末尾的代码将再次被折叠
 engine.closeConnection()
 engine.freeMemory()
 engine.shutdown({ reason: 'End of example boilerplate code' })
 ```
 
-## Line Numbers
+## 行号
 
-[Line Numbers](https://expressive-code.com/plugins/line-numbers/)
+[行号](https://expressive-code.com/plugins/line-numbers/)
 
-### Displaying line numbers per block
+### 为每个代码块显示行号
 
 ```js showLineNumbers
-// This code block will show line numbers
+// 此代码块将显示行号
 console.log('Greetings from line 2!')
 console.log('I am on line 3')
 ```
@@ -298,12 +253,12 @@ console.log('I am on line 3')
 ---
 
 ```js showLineNumbers=false
-// Line numbers are disabled for this block
+// 此块禁用行号
 console.log('Hello?')
 console.log('Sorry, do you know what line I am on?')
 ```
 
-### Changing the starting line number
+### 更改起始行号
 
 ```js showLineNumbers startLineNumber=5
 console.log('Greetings from line 5!')
