@@ -1,24 +1,24 @@
 ---
-title: Expressive Code Example
+title: Expressive Code 示例
 published: 2024-04-10
-description: How code blocks look in Markdown using Expressive Code.
-tags: [Markdown, Blogging, Demo]
-category: Examples
+description: 使用 Expressive Code 展示 Markdown 中代码块的效果。
+tags: [Markdown, 博客，演示]
+category: 示例
 draft: false
 ---
 
-Here, we'll explore how code blocks look using [Expressive Code](https://expressive-code.com/). The provided examples are based on the official documentation, which you can refer to for further details.
+本文将探索使用 [Expressive Code](https://expressive-code.com/) 时代码块的效果。提供的示例基于官方文档，您可以参考该文档了解更多详情。
 
 ## Expressive Code
 
-### Syntax Highlighting
+### 语法高亮
 
-[Syntax Highlighting](https://expressive-code.com/key-features/syntax-highlighting/)
+[语法高亮](https://expressive-code.com/key-features/syntax-highlighting/)
 
-#### Regular syntax highlighting
+#### 常规语法高亮
 
 ```js
-console.log('This code is syntax highlighted!')
+console.log('这段代码被语法高亮了！')
 ```
 
 #### Rendering ANSI escape sequences
@@ -40,64 +40,64 @@ Full RGB colors:
 Text formatting: [1mBold[0m [2mDimmed[0m [3mItalic[0m [4mUnderline[0m
 ```
 
-### Editor & Terminal Frames
+#### 编辑器与终端框架
 
-[Editor & Terminal Frames](https://expressive-code.com/key-features/frames/)
+[编辑器与终端框架](https://expressive-code.com/key-features/frames/)
 
-#### Code editor frames
+#### 代码编辑器框架
 
 ```js title="my-test-file.js"
-console.log('Title attribute example')
+console.log('标题属性示例')
 ```
 
 ---
 
 ```html
 <!-- src/content/index.html -->
-<div>File name comment example</div>
+<div>文件名注释示例</div>
 ```
 
-#### Terminal frames
+#### 终端框架
 
 ```bash
-echo "This terminal frame has no title"
+echo "这个终端框架没有标题"
 ```
 
 ---
 
-```powershell title="PowerShell terminal example"
-Write-Output "This one has a title!"
+```powershell title="PowerShell 终端示例"
+Write-Output "这个有标题！"
 ```
 
-#### Overriding frame types
+#### 覆盖框架类型
 
 ```sh frame="none"
-echo "Look ma, no frame!"
+echo "看，没有框架！"
 ```
 
 ---
 
 ```ps frame="code" title="PowerShell Profile.ps1"
-# Without overriding, this would be a terminal frame
+# 如果不覆盖，这将会是一个终端框架
 function Watch-Tail { Get-Content -Tail 20 -Wait $args }
 New-Alias tail Watch-Tail
 ```
 
-### Text & Line Markers
+### 文本与行标记
 
-[Text & Line Markers](https://expressive-code.com/key-features/text-markers/)
+[文本与行标记](https://expressive-code.com/key-features/text-markers/)
 
-#### Marking full lines & line ranges
+#### 标记整行和行范围
 
 ```js {1, 4, 7-8}
-// Line 1 - targeted by line number
-// Line 2
-// Line 3
-// Line 4 - targeted by line number
-// Line 5
-// Line 6
-// Line 7 - targeted by range "7-8"
-// Line 8 - targeted by range "7-8"
+// 第 1 行 - 按行号定位
+// 第 2 行
+// 第 3 行
+// 第 4 行 - 按行号定位
+// 第 5 行
+// 第 6 行
+// 第 7 行 - 按范围 "7-8" 定位
+// 第 8 行 - 按范围 "7-8" 定位
 ```
 
 #### Selecting line marker types (mark, ins, del)
