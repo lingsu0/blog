@@ -2,7 +2,7 @@
 title: Expressive Code 示例
 published: 2024-04-10
 description: 使用 Expressive Code 展示 Markdown 中代码块的效果。
-tags: [Markdown, 博客，演示]
+tags: [Markdown, 博客, 演示]
 category: 示例
 draft: false
 ---
