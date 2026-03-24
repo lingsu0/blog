@@ -101,5 +101,5 @@ print(response.choices[0].message.content)
 
 ## 参考链接
 
-- [阿里云 DashScope 文档](https://help.aliyun.com/zh/dashscope/)
+- [阿里云 DashScope 文档](https://help.aliyun.com/zh/model-studio/qwen-api-via-dashscope)
 - [OpenAI Python SDK](https://github.com/openai/openai-python)
