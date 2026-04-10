@@ -17,7 +17,7 @@ export const siteConfig: SiteConfig = {
 		fixed: true, // 是否隐藏访客的主题色选择器
 	},
 	banner: {
-		enable: true, // 是否启用横幅图片
+		enable: false, // 是否启用横幅图片
 		src: "assets/images/demo-banner.png", // 横幅图片路径，相对于 /src 目录。如果以 '/' 开头则相对于 /public 目录
 		position: "center", // 图片位置，等同于 object-position，仅支持 'top'、'center'、'bottom'，默认为 'center'
 		credit: {
@@ -25,6 +25,11 @@ export const siteConfig: SiteConfig = {
 			text: "", // 要显示的版权文字
 			url: "", // （可选）原始作品或艺术家页面的链接
 		},
+	},
+	background: {
+		enable: true, // 是否启用背景图片
+		src: "assets/images/background.png", // 背景图片路径，相对于 /src 目录。如果以 '/' 开头则相对于 /public 目录
+		opacity: 0.15, // 背景图片透明度，0-1 之间，默认为 0.15
 	},
 	toc: {
 		enable: true, // 是否在文章右侧显示目录

@@ -4,6 +4,7 @@ import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 
 import ConfigCarrier from "@components/ConfigCarrier.astro";
+import ImageWrapper from "@components/misc/ImageWrapper.astro";
 import { profileConfig, siteConfig } from "@/config";
 import {
 	AUTO_MODE,
@@ -148,10 +149,22 @@ const bannerOffset =
 		<link rel="alternate" type="application/rss+xml" title={profileConfig.name} href={`${Astro.site}rss.xml`}/>
 
 	</head>
-	<body class=" min-h-screen transition " class:list={[{"lg:is-home": isHomePage, "enable-banner": enableBanner}]}
+	<body class=" min-h-screen transition " class:list={[{"lg:is-home": isHomePage, "enable-banner": enableBanner, "enable-background": siteConfig.background.enable}]}
 		  data-overlayscrollbars-initialize
 	>
 		<ConfigCarrier></ConfigCarrier>
+		<!-- Background Layer -->
+		{siteConfig.background.enable && (
+			<div id="background-layer">
+				<ImageWrapper
+					id="background-image"
+					src={siteConfig.background.src}
+					alt="Background"
+					showOverlay={false}
+					style={`opacity: ${siteConfig.background.opacity ?? 0.15}`}
+				/>
+			</div>
+		)}
 		<slot />
 
 		<!-- increase the page height during page transition to prevent the scrolling animation from jumping -->
@@ -190,6 +203,12 @@ const bannerOffset =
 	}
 	.navbar-hidden {
 		@apply opacity-0 -translate-y-16
+	}
+	.enable-background #background-layer {
+		@apply fixed inset-0 z-0 pointer-events-none;
+	}
+	.enable-background #background-image {
+		@apply w-full h-full object-cover;
 	}
 }
 </style>
