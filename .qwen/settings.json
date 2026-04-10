@@ -4,7 +4,9 @@
       "Bash(npx *)",
       "Bash(node *)",
       "Bash(pnpm *)",
-      "Bash(git add *)"
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(tar *)"
     ]
   },
   "$version": 3
