@@ -1,0 +1,70 @@
+﻿2026-04-10T07:05:34.4888471Z ##[group]Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+2026-04-10T07:05:34.4889300Z with:
+2026-04-10T07:05:34.4889772Z   repository: lingsu0/blog
+2026-04-10T07:05:34.4890335Z   token: ***
+2026-04-10T07:05:34.4890654Z   ssh-strict: true
+2026-04-10T07:05:34.4890979Z   ssh-user: git
+2026-04-10T07:05:34.4891315Z   persist-credentials: true
+2026-04-10T07:05:34.4891676Z   clean: true
+2026-04-10T07:05:34.4892014Z   sparse-checkout-cone-mode: true
+2026-04-10T07:05:34.4892413Z   fetch-depth: 1
+2026-04-10T07:05:34.4892724Z   fetch-tags: false
+2026-04-10T07:05:34.4893058Z   show-progress: true
+2026-04-10T07:05:34.4893383Z   lfs: false
+2026-04-10T07:05:34.4893690Z   submodules: false
+2026-04-10T07:05:34.4894126Z   set-safe-directory: true
+2026-04-10T07:05:34.4894680Z ##[endgroup]
+2026-04-10T07:05:34.5759179Z Syncing repository: lingsu0/blog
+2026-04-10T07:05:34.5760930Z ##[group]Getting Git version info
+2026-04-10T07:05:34.5761463Z Working directory is '/home/runner/work/blog/blog'
+2026-04-10T07:05:34.5762313Z [command]/usr/bin/git version
+2026-04-10T07:05:34.5792536Z git version 2.53.0
+2026-04-10T07:05:34.5811502Z ##[endgroup]
+2026-04-10T07:05:34.5829104Z Temporarily overriding HOME='/home/runner/work/_temp/79792720-9d3f-4ac5-b086-f5a13b83cf64' before making global git config changes
+2026-04-10T07:05:34.5831096Z Adding repository directory to the temporary git global config as a safe directory
+2026-04-10T07:05:34.5832989Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/blog/blog
+2026-04-10T07:05:34.5859282Z Deleting the contents of '/home/runner/work/blog/blog'
+2026-04-10T07:05:34.5862459Z ##[group]Initializing the repository
+2026-04-10T07:05:34.5865429Z [command]/usr/bin/git init /home/runner/work/blog/blog
+2026-04-10T07:05:34.5920557Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-04-10T07:05:34.5921906Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-04-10T07:05:34.5922743Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-04-10T07:05:34.5923613Z hint: call:
+2026-04-10T07:05:34.5923909Z hint:
+2026-04-10T07:05:34.5924495Z hint: 	git config --global init.defaultBranch <name>
+2026-04-10T07:05:34.5925082Z hint:
+2026-04-10T07:05:34.5925796Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-04-10T07:05:34.5926973Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-04-10T07:05:34.5927913Z hint:
+2026-04-10T07:05:34.5928403Z hint: 	git branch -m <name>
+2026-04-10T07:05:34.5928869Z hint:
+2026-04-10T07:05:34.5929356Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-04-10T07:05:34.5930629Z Initialized empty Git repository in /home/runner/work/blog/blog/.git/
+2026-04-10T07:05:34.5932562Z [command]/usr/bin/git remote add origin https://github.com/lingsu0/blog
+2026-04-10T07:05:34.5955873Z ##[endgroup]
+2026-04-10T07:05:34.5959069Z ##[group]Disabling automatic garbage collection
+2026-04-10T07:05:34.5959805Z [command]/usr/bin/git config --local gc.auto 0
+2026-04-10T07:05:34.6008440Z ##[endgroup]
+2026-04-10T07:05:34.6009264Z ##[group]Setting up auth
+2026-04-10T07:05:34.6013615Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-04-10T07:05:34.6038063Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-04-10T07:05:34.6266938Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-04-10T07:05:34.6291748Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-04-10T07:05:34.6478728Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-04-10T07:05:34.6511162Z ##[endgroup]
+2026-04-10T07:05:34.6512484Z ##[group]Fetching the repository
+2026-04-10T07:05:34.6517721Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +0acefef471f1f29bdf24ab8d4c123709b4e7eddd:refs/remotes/origin/main
+2026-04-10T07:05:35.2810852Z From https://github.com/lingsu0/blog
+2026-04-10T07:05:35.2811992Z  * [new ref]         0acefef471f1f29bdf24ab8d4c123709b4e7eddd -> origin/main
+2026-04-10T07:05:35.2834192Z ##[endgroup]
+2026-04-10T07:05:35.2835579Z ##[group]Determining the checkout info
+2026-04-10T07:05:35.2837082Z ##[endgroup]
+2026-04-10T07:05:35.2841525Z [command]/usr/bin/git sparse-checkout disable
+2026-04-10T07:05:35.2872769Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-04-10T07:05:35.2896067Z ##[group]Checking out the ref
+2026-04-10T07:05:35.2899280Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-04-10T07:05:35.3034721Z Switched to a new branch 'main'
+2026-04-10T07:05:35.3035799Z branch 'main' set up to track 'origin/main'.
+2026-04-10T07:05:35.3042101Z ##[endgroup]
+2026-04-10T07:05:35.3074597Z [command]/usr/bin/git log -1 --format=%H
+2026-04-10T07:05:35.3092836Z 0acefef471f1f29bdf24ab8d4c123709b4e7eddd

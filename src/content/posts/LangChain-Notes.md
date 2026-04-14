@@ -8,98 +8,96 @@ category: AI开发
 draft: false
 ---
 
-# 通义千问 API 调用示例 - Python 实现
-
 ## 概述
 
-本文介绍如何使用 Python 调用阿里云通义千问（Qwen）大模型的 API，实现简单的对话功能。
-
-## 环境准备
-
-### 安装依赖
-
-```bash
-pip install openai
-```
-
-> 注意：虽然使用的是阿里云的 API，但可以通过 `openai` 库进行调用，因为阿里云提供了兼容 OpenAI 格式的接口。
-
-## 代码解析
-
-### 1. 导入库并创建客户端
-
-```python
-from openai import OpenAI
-
-client = OpenAI(
-    base_url="https://dashscope.aliyuncs.com/compatible-mode/v1"
-    # api_key="YOUR_API_KEY" 需要配置环境变量 DASHSCOPE_API_KEY，配置后不需要再传入
-)
-```
-
-**说明：**
-- 导入 `OpenAI` 类
-- 创建客户端时指定 `base_url` 为阿里云 DashScope 的兼容模式接口地址
-
-### 2. 调用模型
-
-```python
-response = client.chat.completions.create(
-    model="qwen3.5-flash",
-    messages=[
-        {"role": "system", "content": "你是一个 Python 编译专家，并且不说废话简单回答"},
-        {"role": "assistant", "content": "我是编程专家，请问你要问什么"},
-        {"role": "user", "content": "输出 1-10 的数字，使用 Python 代码"}
-    ]
-)
-```
-
-**参数说明：**
-- `model`: 指定使用的模型版本，这里使用的是 `qwen3.5-flash`
-- `messages`: 对话消息列表，每条消息包含：
-    - `role`: 角色类型（`system`/`assistant`/`user`）
-    - `content`: 消息内容
-
-### 3. 处理并输出结果
-
-```python
-print(response.choices[0].message.content)
-```
-
-**说明：**
-- 从响应对象中提取第一个选择的答案内容并打印
+LangChain 是一个用于构建基于大语言模型应用的框架。本文记录了一个基础的 LangChain 使用示例：通过链式调用实现英译中的翻译功能。
 
 ## 完整代码
 
 ```python
-from openai import OpenAI
+from langchain_community.chat_models.tongyi import ChatTongyi
+from langchain_core.prompts import ChatPromptTemplate
+from langchain_core.output_parsers import StrOutputParser
 
-# 1. 获取 client 对象
-client = OpenAI(
-    base_url="https://dashscope.aliyuncs.com/compatible-mode/v1"
+model = ChatTongyi(
+    model="qwen3-max"
+    # api_key="",
 )
 
-# 2. 调用模型
-response = client.chat.completions.create(
-    model="qwen3.5-flash",
-    messages=[
-        {"role": "system", "content": "你是一个 Python 编译专家，并且不说废话简单回答"},
-        {"role": "assistant", "content": "我是编程专家，请问你要问什么"},
-        {"role": "user", "content": "输出 1-10 的数字，使用 Python 代码"}
-    ]
+prompt = ChatPromptTemplate.from_messages([
+    ("system", "You are a helpful assistant."),
+    ("human", "请将下面一段英文翻译成中文：{text}"),
+])
+
+chain = prompt | model | StrOutputParser()
+
+result = chain.invoke(
+    {"text": "I love programming."}
 )
 
-# 3. 处理结果
-print(response.choices[0].message.content)
+print(result)
 ```
 
-## 注意事项
+## 代码说明
 
-1. **API Key 配置**：使用前需要配置 API Key，可以通过环境变量 `DASHSCOPE_API_KEY` 或在代码中传入 `api_key` 参数
-2. **模型选择**：根据需求选择合适的模型版本
-3. **错误处理**：生产环境建议添加 try-except 进行异常处理
+### 1. 导入必要模块
 
-## 参考链接
+代码引入了三个核心组件：
 
-- [阿里云大模型百炼文档](https://help.aliyun.com/zh/model-studio/)
-- [OpenAI Python SDK](https://github.com/openai/openai-python)
+- **`ChatTongyi`**：通义千问的聊天模型接口，来自 `langchain_community` 社区包
+- **`ChatPromptTemplate`**：用于构建结构化的聊天提示模板
+- **`StrOutputParser`**：将模型输出解析为字符串格式
+
+### 2. 初始化模型
+
+通过 `ChatTongyi` 实例化通义千问模型：
+
+- `model` 参数指定使用的模型版本（此处为 `qwen3-max`）
+- `api_key` 参数可选择性地配置 API 密钥（若环境变量已配置则可省略）
+
+### 3. 构建提示模板
+
+使用 `ChatPromptTemplate.from_messages()` 定义对话结构：
+
+- **系统消息 (`system`)**：设定助手的基本角色为"有用的助手"
+- **用户消息 (`human`)**：定义具体任务——将英文翻译为中文，其中 `{text}` 是动态变量占位符
+
+### 4. 创建处理链
+
+通过管道操作符 `|` 将各个组件串联起来：
+
+```
+prompt → model → StrOutputParser
+```
+
+这种链式结构使得数据流清晰，每个组件的输出自动传递给下一个组件。
+
+### 5. 执行调用
+
+使用 `chain.invoke()` 方法执行整个链条：
+
+- 传入字典格式的输入数据 `{"text": "I love programming."}`
+- 该字典的键对应提示模板中的 `{text}` 占位符
+
+### 6. 输出结果
+
+打印最终翻译结果，例如：`"我热爱编程。"`
+
+## 核心概念总结
+
+| 组件 | 作用 |
+|------|------|
+| Model（模型） | 负责生成响应的大语言模型 |
+| Prompt（提示） | 定义输入模板的结构 |
+| Output Parser（输出解析器） | 处理模型原始输出为可用格式 |
+| Chain（链） | 将多个组件组合成可执行的工作流 |
+
+## 扩展阅读
+
+- 可以尝试更换其他模型（如 OpenAI、Claude 等）
+- 结合 RAG（检索增强生成）实现基于知识库的问答
+- 使用更多类型的输出解析器处理 JSON、列表等结构化数据
+
+# 参考文档
+
+[LangChain 官方文档](https://python.langchain.com/en/latest/)

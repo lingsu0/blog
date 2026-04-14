@@ -1,0 +1,12 @@
+﻿2026-04-10T07:05:39.4988487Z ##[group]Run biome ci ./src --reporter=github
+2026-04-10T07:05:39.4988887Z [36;1mbiome ci ./src --reporter=github[0m
+2026-04-10T07:05:39.5012352Z shell: /usr/bin/bash -e {0}
+2026-04-10T07:05:39.5012600Z ##[endgroup]
+2026-04-10T07:05:39.5524926Z ##[warning]Change to an optional chain.
+2026-04-10T07:05:39.5533335Z ci ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+2026-04-10T07:05:39.5534043Z 
+2026-04-10T07:05:39.5534209Z   × Some errors were emitted while running checks.
+2026-04-10T07:05:39.5534472Z   
+2026-04-10T07:05:39.5534568Z 
+2026-04-10T07:05:39.5536584Z ##[error]File content differs from formatting output
+2026-04-10T07:05:39.5541052Z ##[error]Process completed with exit code 1.

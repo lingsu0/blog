@@ -1,0 +1,32 @@
+﻿2026-04-10T07:05:33.1281162Z Current runner version: '2.333.1'
+2026-04-10T07:05:33.1302590Z ##[group]Runner Image Provisioner
+2026-04-10T07:05:33.1303224Z Hosted Compute Agent
+2026-04-10T07:05:33.1303762Z Version: 20260213.493
+2026-04-10T07:05:33.1304207Z Commit: 5c115507f6dd24b8de37d8bbe0bb4509d0cc0fa3
+2026-04-10T07:05:33.1304753Z Build Date: 2026-02-13T00:28:41Z
+2026-04-10T07:05:33.1305275Z Worker ID: {6ee22aff-cf66-40b1-b67e-f930f4e15406}
+2026-04-10T07:05:33.1305863Z Azure Region: westus
+2026-04-10T07:05:33.1306291Z ##[endgroup]
+2026-04-10T07:05:33.1307396Z ##[group]Operating System
+2026-04-10T07:05:33.1307922Z Ubuntu
+2026-04-10T07:05:33.1308277Z 24.04.4
+2026-04-10T07:05:33.1308691Z LTS
+2026-04-10T07:05:33.1309073Z ##[endgroup]
+2026-04-10T07:05:33.1309642Z ##[group]Runner Image
+2026-04-10T07:05:33.1310047Z Image: ubuntu-24.04
+2026-04-10T07:05:33.1310527Z Version: 20260406.80.1
+2026-04-10T07:05:33.1311319Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260406.80/images/ubuntu/Ubuntu2404-Readme.md
+2026-04-10T07:05:33.1312654Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260406.80
+2026-04-10T07:05:33.1313356Z ##[endgroup]
+2026-04-10T07:05:33.1314248Z ##[group]GITHUB_TOKEN Permissions
+2026-04-10T07:05:33.1315678Z Contents: read
+2026-04-10T07:05:33.1316104Z Metadata: read
+2026-04-10T07:05:33.1316623Z Packages: read
+2026-04-10T07:05:33.1317054Z ##[endgroup]
+2026-04-10T07:05:33.1319066Z Secret source: Actions
+2026-04-10T07:05:33.1319999Z Prepare workflow directory
+2026-04-10T07:05:33.1577154Z Prepare all required actions
+2026-04-10T07:05:33.1607546Z Getting action download info
+2026-04-10T07:05:33.6343455Z Download action repository 'actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683' (SHA:11bd71901bbe5b1630ceea73d27597364c9af683)
+2026-04-10T07:05:33.8135140Z Download action repository 'biomejs/setup-biome@f382a98e582959e6aaac8e5f8b17b31749018780' (SHA:f382a98e582959e6aaac8e5f8b17b31749018780)
+2026-04-10T07:05:34.4337283Z Complete job name: quality
